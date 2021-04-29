@@ -1,0 +1,303 @@
+/*
+	*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+	*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+body {
+    line-height: 1
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold
+}
+
+del {
+    text-decoration: line-through
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cairo;
+}
+
+/*** DONOT INCLUDE the top left and transform this is  JUST FOR DEMO ****/
+body .wrapper_images {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/*** MAIN STYLING HERE ***/
+
+
+
+
+.image_hover {
+    width: 255px;
+}
+
+.image_hover:hover {
+    cursor: pointer;
+}
+
+.image_hover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.icons_images {
+	width: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 42%;
+    z-index: 5;
+    opacity: 0;
+    transition: 250ms cubic-bezier(.18, .89, .32, 1.28);
+    transform: translateY(20px);
+}
+
+.icons_images .m-main {
+    background-color: #c21230;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ece5dc;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    -webkit-margin-start: auto;
+    margin-inline-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto;
+}
+
+.m-main-options {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    align-items: center;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    transform: scale(0);
+    transition: all 250ms cubic-bezier(.18, .89, .32, 1.28);
+}
+
+.m-main-options span,
+.m-main-options a {
+    position: relative;
+    margin-bottom: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 20em;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ece5dc;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(.18, .89, .32, 1.28);
+    overflow: hidden;
+}
+
+.m-main-options span:hover,
+.m-main-options a:hover,
+.icons_images .m-main:hover {
+    background-color: #c21230;
+    border-color: #c21230;
+    color: #fff;
+    transform: none;
+}
+.m-main-options:hover .icons_images #mm-main {
+	background-color: blue!important;
+    border-color: #c21230 !important;
+    color: #fff;
+    transform: none;
+}
+
+.main_images_main:hover .icons_images {
+    transform: none;
+    opacity: 1;
+}
+
+.main_images_main>:hover .m-main-options {
+    transform: none;
+    opacity: 1;
+    font-size: calc(10px - .25rem);
+}
+
+.m-main-options>:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.is-active {
+    background-color: #c21230 !important;
+    border-color: #c21230 !important;
+    color: #fff;
+    transform: none;
+}
